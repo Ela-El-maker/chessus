@@ -1,3 +1,6 @@
 {
-    "cmake.ignoreCMakeListsMissing": true
+    "cmake.ignoreCMakeListsMissing": true,
+    "files.autoSave": "onFocusChange",
+    "editor.fontSize": 20,
+    "editor.fontFamily": "MonoLisa"
 }

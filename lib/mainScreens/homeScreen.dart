@@ -1,7 +1,9 @@
 import 'package:chessus/mainScreens/aboutScreen.dart';
 import 'package:chessus/mainScreens/gameTimeScreen.dart';
 import 'package:chessus/mainScreens/settingScreen.dart';
+import 'package:chessus/providers/gameProvider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../helper/helperMethods.dart';
 
@@ -15,6 +17,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
+    final gameProvider = context.read<GameProvider>();
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue,
@@ -34,7 +37,8 @@ class _HomeScreenState extends State<HomeScreen> {
             buildGameType(
                 label: "Play VS Computer",
                 icon: Icons.computer,
-                onTap: () {
+                onTap: () async {
+                  await gameProvider.setVsComputer(value: true);
                   // Goto =>> computer player
                   Navigator.push(
                       context,
@@ -44,7 +48,9 @@ class _HomeScreenState extends State<HomeScreen> {
             buildGameType(
                 label: "Play VS Friend",
                 icon: Icons.person,
-                onTap: () {
+                onTap: () async {
+                  await gameProvider.setVsComputer(value: false);
+
                   // Goto =>> computer player
                   Navigator.push(
                       context,

@@ -38,6 +38,7 @@ dependencies:
   bishop: ^1.4.3
   square_bishop: ^0.3.0
   squares: ^1.2.1
+  provider: ^6.1.2
 
 dev_dependencies:
   flutter_test:
