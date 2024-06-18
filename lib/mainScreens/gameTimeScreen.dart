@@ -1,3 +1,4 @@
+import 'package:chessus/constants.dart';
 import 'package:chessus/helper/helperMethods.dart';
 import 'package:chessus/mainScreens/gameStartUpScreen.dart';
 import 'package:chessus/providers/gameProvider.dart';
@@ -54,11 +55,19 @@ class _GameTimeScreenState extends State<GameTimeScreen> {
                   label: label,
                   gameTime: gameTime,
                   onTap: () {
-                    if (label == 'Custom') {}
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => GameStartUpScreen()));
+                    if (label == Constants.custom) {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => GameStartUpScreen(
+                                  isCustomTime: true, gameTime: gameTime)));
+                    } else {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => GameStartUpScreen(
+                                  isCustomTime: true, gameTime: gameTime)));
+                    }
                   });
             }));
   }

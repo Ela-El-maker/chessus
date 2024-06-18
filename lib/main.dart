@@ -1,4 +1,10 @@
+import 'package:chessus/constants.dart';
+import 'package:chessus/mainScreens/aboutScreen.dart';
+import 'package:chessus/mainScreens/gameScreen.dart';
+import 'package:chessus/mainScreens/gameStartUpScreen.dart';
+import 'package:chessus/mainScreens/gameTimeScreen.dart';
 import 'package:chessus/mainScreens/homeScreen.dart';
+import 'package:chessus/mainScreens/settingScreen.dart';
 import 'package:chessus/providers/gameProvider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -21,7 +27,17 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const HomeScreen(),
+      // home: const HomeScreen(),
+      initialRoute: Constants.homeScreen,
+      routes: {
+        Constants.homeScreen: (context) => HomeScreen(),
+        Constants.gameScreen: (context) => GameScreen(),
+        Constants.settingScreen: (context) => SettingsScreen(),
+        Constants.aboutScreen: (context) => AboutScreen(),
+        // Constants.gameStartUpScreen: (context) => GameStartUpScreen(),
+        Constants.gameTimeScreen: (context) => GameTimeScreen(),
+        // Constants.homeScreen: (context) => HomeScreen(),
+      },
     );
   }
 }
