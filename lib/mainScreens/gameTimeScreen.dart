@@ -41,15 +41,11 @@ class _GameTimeScreenState extends State<GameTimeScreen> {
             ),
             itemCount: gameTimes.length,
             itemBuilder: (context, index) {
-              // Get the first word of the game time
+              // get the first word of the game time
               final String label = gameTimes[index].split(' ')[0];
 
-              // get the second word of the game time
-              final String gameTime = gameTimes[index].split(' ')[1] +
-                  ' ' +
-                  gameTimes[index].split(' ')[2] +
-                  ' ' +
-                  gameTimes[index].split(' ')[3];
+              // gat the second word from game time
+              final String gameTime = gameTimes[index].split(' ')[1];
 
               return buildGameType(
                   label: label,

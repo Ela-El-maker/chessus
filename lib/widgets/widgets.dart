@@ -33,11 +33,12 @@ class PlayerColorRadioButton extends StatelessWidget {
 }
 
 class BuildCustomTime extends StatelessWidget {
-  const BuildCustomTime(
-      {super.key,
-      required this.time,
-      required this.onLeftArrowClicked,
-      required this.onRightArrowClicked});
+  const BuildCustomTime({
+    super.key,
+    required this.time,
+    required this.onLeftArrowClicked,
+    required this.onRightArrowClicked,
+  });
 
   final String time;
   final Function() onLeftArrowClicked;
@@ -49,7 +50,7 @@ class BuildCustomTime extends StatelessWidget {
       children: [
         InkWell(
           onTap: time == '0' ? null : onLeftArrowClicked,
-          child: Icon(
+          child: const Icon(
             (Icons.arrow_back),
           ),
         ),
@@ -58,30 +59,22 @@ class BuildCustomTime extends StatelessWidget {
           child: Container(
             height: 40,
             decoration: BoxDecoration(
-              border: Border.all(width: 0.5, color: Colors.black),
-              borderRadius: BorderRadius.circular(10),
-            ),
+                border: Border.all(width: 0.5, color: Colors.black),
+                borderRadius: BorderRadius.circular(10)),
             child: Padding(
               padding: const EdgeInsets.all(6.0),
               child: Center(
                 child: Text(
                   time,
                   textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.black,
-                  ),
+                  style: const TextStyle(fontSize: 20, color: Colors.black),
                 ),
               ),
             ),
           ),
         ),
         InkWell(
-          onTap: onRightArrowClicked,
-          child: Icon(
-            (Icons.arrow_forward),
-          ),
-        ),
+            onTap: onRightArrowClicked, child: const Icon(Icons.arrow_forward)),
       ],
     );
   }
