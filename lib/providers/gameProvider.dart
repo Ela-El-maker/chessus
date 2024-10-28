@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'package:chessus/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:squares/squares.dart';
 import 'package:bishop/bishop.dart' as bishop;
 import 'package:square_bishop/square_bishop.dart';

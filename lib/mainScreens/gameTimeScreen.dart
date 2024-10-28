@@ -21,7 +21,7 @@ class _GameTimeScreenState extends State<GameTimeScreen> {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.blue,
-          title: Text(
+          title: const Text(
             'Choose Game Time',
             style: TextStyle(color: Colors.white),
           ),
@@ -29,13 +29,13 @@ class _GameTimeScreenState extends State<GameTimeScreen> {
               onPressed: () {
                 Navigator.pop(context);
               },
-              icon: Icon(
+              icon: const Icon(
                 Icons.arrow_back,
                 color: Colors.white,
               )),
         ),
         body: GridView.builder(
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
               childAspectRatio: 1.5,
             ),
@@ -64,7 +64,7 @@ class _GameTimeScreenState extends State<GameTimeScreen> {
                               builder: (context) => GameStartUpScreen(
                                   isCustomTime: true, gameTime: gameTime)));
                     }
-                  });
-            }));
+                  },);
+            },),);
   }
 }

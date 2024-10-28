@@ -1,7 +1,6 @@
 import 'package:chessus/constants.dart';
 import 'package:chessus/mainScreens/aboutScreen.dart';
 import 'package:chessus/mainScreens/gameScreen.dart';
-import 'package:chessus/mainScreens/gameStartUpScreen.dart';
 import 'package:chessus/mainScreens/gameTimeScreen.dart';
 import 'package:chessus/mainScreens/homeScreen.dart';
 import 'package:chessus/mainScreens/settingScreen.dart';

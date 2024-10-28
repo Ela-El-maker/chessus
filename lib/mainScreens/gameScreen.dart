@@ -150,7 +150,7 @@ class _GameScreenState extends State<GameScreen> {
             onPressed: () {
               gameProvider.resetGame(newGame: false);
             },
-            icon: Icon(
+            icon: const Icon(
               Icons.start_outlined,
               color: Colors.white,
             ),
